@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_chat_receive"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_chat_receive_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:layout_marginStart="12dp"
+            android:layout_alignBottom="@id/item_chat_receive_message"/>
+        <TextView
+            android:id="@+id/item_chat_receive_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:layout_margin="4dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
+            android:background="@drawable/bg_chat_receive"
+            android:layout_toEndOf="@id/item_chat_receive_profile"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/item_chat_send"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_chat_send_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:layout_marginEnd="12dp"
+            android:layout_alignBottom="@id/item_chat_send_message"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/item_chat_send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:layout_margin="4dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:text="hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
+            android:background="@drawable/bg_chat_send"
+            android:layout_toStartOf="@id/item_chat_send_profile"/>
+
+    </RelativeLayout>
+</RelativeLayout>

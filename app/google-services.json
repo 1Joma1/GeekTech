@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "932715284972",
+    "firebase_url": "https://geektechnew.firebaseio.com",
+    "project_id": "geektechnew",
+    "storage_bucket": "geektechnew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932715284972:android:82a6a765993f77be9498c9",
+        "android_client_info": {
+          "package_name": "com.joma.geektech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932715284972-8tkluv1ucie8bddak80jg5o6ujpccpmd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joma.geektech",
+            "certificate_hash": "90fe9f110f36d7a83dc991f1ac99d5d71a701a62"
+          }
+        },
+        {
+          "client_id": "932715284972-tacl305gvrq9nhacl2j6jasa3i1ukt9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZC8hxqFxzTT6eTgkMzedFp4PeGQDfw3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932715284972-tacl305gvrq9nhacl2j6jasa3i1ukt9c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

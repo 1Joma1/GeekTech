@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/menu_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="Calendar" />
+    <item
+        android:id="@+id/menu_homework"
+        android:icon="@drawable/ic_homework"
+        android:title="Homework" />
+    <item
+        android:id="@+id/menu_stack"
+        android:icon="@drawable/ic_stack"
+        android:title="Stack" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+
+</menu>
