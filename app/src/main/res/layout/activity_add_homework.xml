@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/add_homework_task_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            android:hint="@string/lesson"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_1"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_2"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_3"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_4"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_5"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_6"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_7"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_8"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_9"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/add_homework_task_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:hint="@string/task_10"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/add_homework_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

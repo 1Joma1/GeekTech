@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.joma.geektech.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -13,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (FirebaseAuth.getInstance().getCurrentUser()==null){
+        if (getSharedPreferences("data", MODE_PRIVATE).getBoolean("login", true)){
             RegisterActivity.start(this);
         } else {
             MainActivity.start(this);

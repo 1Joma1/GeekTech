@@ -6,5 +6,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homework_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:paddingBottom="72dp"
+        android:clipToPadding="false"/>
+    <ImageView
+        android:id="@+id/homework_add"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/white_circle"
+        android:padding="12dp"/>
 </RelativeLayout>

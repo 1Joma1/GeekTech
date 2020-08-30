@@ -9,7 +9,6 @@ import com.joma.geektech.calendar.CalendarFragment;
 import com.joma.geektech.chat.ChatFragment;
 import com.joma.geektech.homework.HomeworkFragment;
 import com.joma.geektech.profile.ProfileFragment;
-import com.joma.geektech.stack.StackFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -25,9 +24,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 return new CalendarFragment();
             case 2:
                 return new HomeworkFragment();
+//            case 3:
+//                return new StackFragment();
             case 3:
-                return new StackFragment();
-            case 4:
                 return new ProfileFragment();
             default:
                 return new ChatFragment();
@@ -36,6 +35,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }

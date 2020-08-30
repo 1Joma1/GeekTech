@@ -12,10 +12,10 @@
         android:id="@+id/menu_homework"
         android:icon="@drawable/ic_homework"
         android:title="Homework" />
-    <item
-        android:id="@+id/menu_stack"
-        android:icon="@drawable/ic_stack"
-        android:title="Stack" />
+<!--    <item-->
+<!--        android:id="@+id/menu_stack"-->
+<!--        android:icon="@drawable/ic_stack"-->
+<!--        android:title="Stack" />-->
 
     <item
         android:id="@+id/menu_profile"

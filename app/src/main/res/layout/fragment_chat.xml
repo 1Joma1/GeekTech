@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingTop="12dp" />
+        android:paddingTop="12dp"
+        android:layout_above="@id/chat_message"/>
 
     <EditText
         android:id="@+id/chat_message"
@@ -18,7 +19,7 @@
         android:layout_margin="4dp"
         android:layout_toStartOf="@id/chat_send"
         android:background="#E6E6E6"
-        android:hint="Message"
+        android:hint="@string/message"
         android:padding="12dp" />
 
     <ImageView

@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#4D000000"/>
+        android:background="#66000000"/>
 
     <ImageView
         android:id="@+id/register_profile"
@@ -29,7 +29,7 @@
         android:layout_below="@id/register_profile"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="4dp"
-        android:text="Name" />
+        android:text="@string/name" />
 
     <EditText
         android:id="@+id/register_name"
@@ -43,7 +43,7 @@
         android:padding="12dp" />
 
     <TextView
-        android:id="@+id/register_phone_text"
+        android:id="@+id/register_password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -51,48 +51,18 @@
         android:layout_marginStart="12dp"
         android:layout_marginBottom="4dp"
         android:layout_marginTop="12dp"
-        android:text="Phone number" />
+        android:text="@string/password" />
 
     <EditText
-        android:id="@+id/register_phone"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register_phone_text"
+        android:inputType="textPassword"
+        android:layout_below="@id/register_password_text"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        android:inputType="phone"
         android:background="@color/white"
-        android:padding="12dp"
-        android:text="+" />
-
-    <TextView
-        android:id="@+id/register_code_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register_phone"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:translationY="20dp"
-        android:alpha="0"
-        android:visibility="invisible"
-        android:textColor="@color/white"
-        android:text="SMS code" />
-
-    <EditText
-        android:id="@+id/register_code"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register_code_text"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:inputType="number"
-        android:maxLength="6"
-        android:translationY="20dp"
-        android:alpha="0"
-        android:visibility="invisible"
-        android:background="@color/white"
-        android:hint="XXXXXX"
-        android:padding="12dp" />
+        android:padding="12dp"/>
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -110,7 +80,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="32dp"
         android:background="@color/colorAccent"
-        android:text="Log In"
+        android:text="@string/log_in"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

@@ -1,61 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<ImageView
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:src="@drawable/bg_profile_wall"/>
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/bg_profile_wall" />
+
+    <TextView
+        android:id="@+id/profile_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/profile_log_out"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_log_out" />
+
     <ImageView
         android:id="@+id/profile_profile"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:src="@drawable/profile"/>
+        android:src="@drawable/profile" />
+
     <TextView
         android:id="@+id/profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_profile"
-        android:text="Name"
         android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
+
     <TextView
         android:id="@+id/profile_thread_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_name"
-        android:text="Thread:"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="12dp"/>
+        android:text="@string/thread" />
+
     <TextView
         android:id="@+id/profile_thread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_name"
-        android:text="12"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@id/profile_thread_text"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
+
     <TextView
         android:id="@+id/profile_geek_coin_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_thread"
-        android:text="GeekCoin:"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="12dp"/>
+        android:text="@string/geekcoin" />
+
     <TextView
         android:id="@+id/profile_geek_coin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_thread"
-        android:text="4"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@id/profile_geek_coin_text"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/profile_add_user"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/white_circle"
+        android:padding="12dp"
+        android:src="@drawable/ic_add_users"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/profile_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/get_geekcoin"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/profile_give"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/give_geekcoin"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/profile_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:alpha="0" />
+
+    <LinearLayout
+        android:id="@+id/profile_lessons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/profile_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:alpha="0"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/profile_lesson1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_1"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_2"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_3"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/profile_lesson4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_4"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_5"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_6"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/profile_lesson7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_7"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/lesson_8"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/profile_lesson9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:text="@string/other"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

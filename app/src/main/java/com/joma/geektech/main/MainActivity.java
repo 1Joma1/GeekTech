@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void findView(){
         viewPager = findViewById(R.id.main_view_pager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-        viewPager.setOffscreenPageLimit(5);
+        viewPager.setOffscreenPageLimit(4);
         bnv = findViewById(R.id.main_bottom_nav);
     }
 
@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_homework:
                         viewPager.setCurrentItem(2, false);
                         break;
-                    case R.id.menu_stack:
-                        viewPager.setCurrentItem(3, false);
-                        break;
+//                    case R.id.menu_stack:
+//                        viewPager.setCurrentItem(3, false);
+//                        break;
                     case R.id.menu_profile:
-                        viewPager.setCurrentItem(4, false);
+                        viewPager.setCurrentItem(3, false);
                         break;
                 }
                 return true;
@@ -78,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         bnv.setSelectedItemId(R.id.menu_homework);
                         break;
+//                    case 3:
+//                        bnv.setSelectedItemId(R.id.menu_stack);
+//                        break;
                     case 3:
-                        bnv.setSelectedItemId(R.id.menu_stack);
-                        break;
-                    case 4:
                         bnv.setSelectedItemId(R.id.menu_profile);
                         break;
                 }

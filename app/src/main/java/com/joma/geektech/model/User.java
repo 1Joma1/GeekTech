@@ -3,11 +3,12 @@ package com.joma.geektech.model;
 public class User {
     private String id;
     private String name;
-    private String phone;
+    private String password;
     private String profile;
     private String coin;
     private String group;
     private boolean admin;
+    private boolean teacher;
 
     public User() {
     }
@@ -28,12 +29,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getProfile() {
@@ -68,15 +69,11 @@ public class User {
         this.admin = admin;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", profile='" + profile + '\'' +
-                ", coin='" + coin + '\'' +
-                ", group='" + group + '\'' +
-                '}';
+    public boolean isTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(boolean teacher) {
+        this.teacher = teacher;
     }
 }

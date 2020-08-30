@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">GeekTech</string>
+    <string name="add">Add</string>
+    <string name="added">Added</string>
+    <string name="task_10">Task 10</string>
+    <string name="task_9">Task 9</string>
+    <string name="task_8">Task 8</string>
+    <string name="task_7">Task 7</string>
+    <string name="task_6">Task 6</string>
+    <string name="task_5">Task 5</string>
+    <string name="task_4">Task 4</string>
+    <string name="task_3">Task 3</string>
+    <string name="task_2">Task 2</string>
+    <string name="task_1">Task 1</string>
+    <string name="lesson">Lesson</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="thread">Thread</string>
+    <string name="geekcoin" translatable="false">GeekCoin</string>
+    <string name="admin">Admin</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="log_in">Log In</string>
+    <string name="event">Event</string>
+    <string name="message">Message</string>
+    <string name="get_geekcoin">Get GeekCoin</string>
+    <string name="give_geekcoin">Give GeekCoin</string>
+    <string name="lesson_1">Lesson 1</string>
+    <string name="lesson_2">Lesson 2</string>
+    <string name="lesson_3">Lesson 3</string>
+    <string name="lesson_4">Lesson 4</string>
+    <string name="lesson_5">Lesson 5</string>
+    <string name="lesson_6">Lesson 6</string>
+    <string name="lesson_7">Lesson 7</string>
+    <string name="lesson_8">Lesson 8</string>
+    <string name="other">Other</string>
+    <string name="must_fill">Must fill</string>
+    <string name="are_you_sure_to_delet">Are you sure to delete?</string>
+    <string name="are_you_sure_to_log_out">Are you sure to log out?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="edited">Edited</string>
+    <string name="log_out">Log out</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="you_dont_have_geekcoin">You don\'t have GeekCoin</string>
 </resources>

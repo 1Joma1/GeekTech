@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_user_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/add_user_name"/>
+
+    <EditText
+        android:id="@+id/add_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_above="@id/add_user_password"
+        android:background="@color/white"
+        android:hint="@string/name"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/add_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_user_layout"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:padding="12dp" />
+<LinearLayout
+    android:id="@+id/add_user_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_above="@id/add_user_admin">
+    <EditText
+        android:id="@+id/add_user_thread"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/white"
+        android:hint="@string/thread"
+        android:inputType="number"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/add_user_coin"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/white"
+        android:hint="@string/geekcoin"
+        android:inputType="number"
+        android:padding="12dp" />
+
+</LinearLayout>
+
+    <CheckBox
+        android:id="@+id/add_user_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admin"
+        android:layout_margin="12dp"
+        android:layout_alignParentBottom="true"/>
+    <CheckBox
+        android:id="@+id/add_user_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teacher"
+        android:layout_margin="12dp"
+        android:layout_toEndOf="@id/add_user_admin"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/add_user_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/add"
+        android:padding="4dp"
+        android:textAllCaps="false"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

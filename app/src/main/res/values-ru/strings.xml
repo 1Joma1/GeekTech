@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GeekTech</string>
+    <string name="add">Добавить</string>
+    <string name="task_10">Задача 10</string>
+    <string name="task_9">Задача 9</string>
+    <string name="task_8">Задача 8</string>
+    <string name="task_7">Задача 7</string>
+    <string name="task_6">Задача 6</string>
+    <string name="task_5">Задача 5</string>
+    <string name="task_4">Задача 4</string>
+    <string name="task_3">Задача 3</string>
+    <string name="task_2">Задача 2</string>
+    <string name="task_1">Задача 1</string>
+    <string name="lesson">Урок</string>
+    <string name="name">Имя</string>
+    <string name="password">Пароль</string>
+    <string name="thread">Поток</string>
+    <string name="admin">Админ</string>
+    <string name="teacher">Учитель</string>
+    <string name="log_in">Вход</string>
+    <string name="event">Событие</string>
+    <string name="message">Сообщение</string>
+    <string name="get_geekcoin">Получить GeekCoin</string>
+    <string name="give_geekcoin">Дать GeekCoin</string>
+    <string name="lesson_1">Урок 1</string>
+    <string name="lesson_2">Урок 2</string>
+    <string name="lesson_3">Урок 3</string>
+    <string name="lesson_4">Урок 4</string>
+    <string name="lesson_5">Урок 5</string>
+    <string name="lesson_6">Урок 6</string>
+    <string name="lesson_7">Урок 7</string>
+    <string name="lesson_8">Урок 8</string>
+    <string name="other">Другое</string>
+    <string name="must_fill">должен быть заполнен</string>
+    <string name="are_you_sure_to_delet">Вы уверены, что хотите удалить?</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="log_out">Dыйти</string>
+    <string name="are_you_sure_to_log_out">Вы уверены, что хотите выйти?</string>
+    <string name="added">Добавлено</string>
+    <string name="student">Ученик</string>
+    <string name="cancelled">Отменено</string>
+    <string name="you_dont_have_geekcoin">У вас нет GeekCoin</string>
+    <string name="edit">Редактировать</string>
+    <string name="edited">Отредактировано</string>
+</resources>

@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <CalendarView
         android:id="@+id/calendar_calendar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendar_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/calendar_calendar"/>
+        android:layout_above="@id/calendar_event"
+        android:layout_below="@id/calendar_calendar" />
+
+    <EditText
+        android:id="@+id/calendar_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/calendar_save"
+        android:background="@color/white"
+        android:hint="@string/event"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/calendar_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone" />
 </RelativeLayout>

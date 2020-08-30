@@ -22,16 +22,15 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.joma.geektech.R;
 import com.joma.geektech.model.Chat;
+import com.joma.geektech.model.User;
 import com.joma.geektech.util.Utils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ChatFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private EditText message;
     private ImageView send;
+    private User user;
 
     private ChatAdapter adapter;
 
@@ -39,13 +38,15 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chat, null);
+
+        user = Utils.getUser(getContext());
         initView(view);
         listener();
         return view;
     }
 
     private void initView(View view) {
-        adapter = new ChatAdapter(getContext());
+        adapter = new ChatAdapter(user.getId());
         message = view.findViewById(R.id.chat_message);
         send = view.findViewById(R.id.chat_send);
         recyclerView = view.findViewById(R.id.chat_recycler);
@@ -75,14 +76,11 @@ public class ChatFragment extends Fragment {
             }
         });
 
-        send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Chat chat = new Chat(Utils.getPhone(getContext()), Utils.getText(message), Utils.getProfile(getContext()));
-                send.setVisibility(View.GONE);
-                message.setText("");
-                FirebaseFirestore.getInstance().collection("Chat").add(chat);
-            }
+        send.setOnClickListener(view -> {
+            Chat chat = new Chat(user.getName(), Utils.getText(message), user.getProfile(), user.getId());
+            send.setVisibility(View.GONE);
+            message.setText("");
+            FirebaseFirestore.getInstance().collection("Chat").add(chat);
         });
 
         FirebaseFirestore.getInstance().collection("Chat").orderBy("time").addSnapshotListener(new EventListener<QuerySnapshot>() {

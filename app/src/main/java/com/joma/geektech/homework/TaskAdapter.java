@@ -1,37 +1,26 @@
 package com.joma.geektech.homework;
 
-import android.content.Context;
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.joma.geektech.R;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.joma.geektech.model.Homework;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
 
-    private List<String> list = new ArrayList<>();
+    private Homework homework = new Homework();
 
-    public void setList(List<String> list){
-        this.list = list;
+    public void setList(Homework homework){
+        this.homework = homework;
         notifyDataSetChanged();
-    }
-
-    public void addItem(String task){
-        this.list.add(task);
-        notifyDataSetChanged();
-    }
-
-    public List<String> getList(){
-        return this.list;
     }
 
     @NonNull
@@ -43,12 +32,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bind(list.get(position), position);
+        holder.bind(homework.getTasks().get(position));
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return homework.getTasks().size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -61,21 +50,22 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
 
             taskText = itemView.findViewById(R.id.item_task_task);
             checkBox = itemView.findViewById(R.id.item_task_checkbox);
-            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    checkBox.getContext().getSharedPreferences("data", Context.MODE_PRIVATE).edit().putBoolean(getAdapterPosition()+"", b).apply();
-                }
-            });
         }
 
-        public void bind(String task, int pos){
+        public void bind(String task){
             taskText.setText(task);
-            if (checkBox.getContext().getSharedPreferences("data", Context.MODE_PRIVATE).getBoolean(pos+"", false)){
-                checkBox.setChecked(true);
-            } else {
-                checkBox.setChecked(false);
-            }
+            taskText.setOnLongClickListener(view -> {
+                AlertDialog.Builder alert = new AlertDialog.Builder(itemView.getContext());
+                alert.setTitle(taskText.getContext().getResources().getString(R.string.are_you_sure_to_delet));
+                alert.setNeutralButton(taskText.getContext().getResources().getString(R.string.cancel), null);
+                alert.setPositiveButton(taskText.getContext().getResources().getString(R.string.delete), (dialogInterface, i) -> {
+                    homework.getTasks().remove(getAdapterPosition());
+                    notifyItemRemoved(getAdapterPosition());
+                    FirebaseFirestore.getInstance().collection("Homework").document(homework.getId()).set(homework);
+                });
+                alert.show();
+                return true;
+            });
         }
     }
 }

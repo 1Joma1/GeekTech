@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.joma.geektech">
 
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
-        android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="portrait" tools:replace="screenOrientation"/>
         <activity android:name=".start.RegisterActivity"/>
+        <activity android:name=".profile.AddUsersActivity"/>
+        <activity android:name=".homework.AddHomeworkActivity"/>
+        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".profile.GeekCoinHistoryActivity"/>
         <activity android:name=".start.SplashActivity"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
@@ -18,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity"/>
     </application>
+
 
 </manifest>
